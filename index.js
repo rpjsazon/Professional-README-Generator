@@ -3,7 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-
 const questions = [
   {
     type:'input',
@@ -43,12 +42,20 @@ const questions = [
   },
 ]
 
+function writeToFile(filename, data){
+  fs.writeFile(filename, data, (err) => {
+    if (err)
+    throw err;
+    console.log('Success! Your input transferred to the README');
+  });
+};
+
 function init(){
   inquirer.prompt(questions)
   .then(function (userInput){
     console.log(userInput)
-    
-  })
-}
+    writeToFile("README.md", generateMarkdown(userInput));
+  });
+};
 
 init();

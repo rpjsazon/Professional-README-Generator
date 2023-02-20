@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
+// Arrays of questions
 const questions = [
   {
     type:'input',
@@ -35,10 +36,17 @@ const questions = [
     message: 'How do you test this project?'
   },
   {
+    // Type checkbox for selection
     type:'checkbox',
     name: 'license',
     message: 'Choose a license for this project',
     choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause Simplified License', 'None']
+  },
+  {
+    // Type checkbox for selection
+    type:'input',
+    name: 'email',
+    message: 'What is your email?'
   },
 ]
 
@@ -54,6 +62,7 @@ function init(){
   inquirer.prompt(questions)
   .then(function (userInput){
     console.log(userInput)
+    // Saving all data to README.md
     writeToFile("README.md", generateMarkdown(userInput));
   });
 };

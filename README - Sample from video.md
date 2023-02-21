@@ -1,14 +1,13 @@
-function generateMarkdown(data){
-  return `# ${data.title}
+# Markdown Generator
 
   ## Link:
-  https://rpjsazon.github.io/Professional-README-Generator/
+  ![Click Here](https://rpjsazon.github.io/Professional-README-Generator/)
 
   ## License:
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Description:
-  ${data.description}
+  For creating markdowns
 
   ## Table of Contents:
   - [Description](#description)
@@ -19,27 +18,24 @@ function generateMarkdown(data){
   - [Email](#email)
 
   ## Installation:
-  ${data.installation}
+  test
 
   ## Usage:
-  ${data.usage}
+  for creating markdown
 
   ## Usage:
-  ${data.usage}
+  for creating markdown
 
   ## License:
-  ${data.license}
+  MIT
 
   ## Contributing:
-  ${data.contributing}
+  anyone
 
   ## Tests:
-  ${data.tests}
+  test
 
   ## Email
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}
+  If you have any questions about the repo, open an issue or contact me directly at rpjsazon@gmail.com
 
-  `;
-}
-
-module.exports = generateMarkdown;
+  

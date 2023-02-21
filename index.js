@@ -40,14 +40,14 @@ const questions = [
     type:'checkbox',
     name: 'license',
     message: 'Choose a license for this project',
-    choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause Simplified License', 'None']
+    choices: ['Apache', 'GNU', 'MIT', 'BSD', 'None']
   },
   {
     // Type checkbox for selection
     type:'input',
     name: 'email',
     message: 'What is your email?'
-  },
+  }
 ]
 
 function writeToFile(filename, data){
@@ -58,6 +58,7 @@ function writeToFile(filename, data){
   });
 };
 
+// Function for initializing the application
 function init(){
   inquirer.prompt(questions)
   .then(function (userInput){
@@ -67,4 +68,5 @@ function init(){
   });
 };
 
+// To activate initialize
 init();

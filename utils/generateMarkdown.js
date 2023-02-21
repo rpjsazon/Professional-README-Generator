@@ -13,7 +13,7 @@ function generateMarkdown(data){
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Question](#email)
+  - [Email](#email)
 
   ## Installation:
   ${data.installation}
@@ -33,8 +33,8 @@ function generateMarkdown(data){
   ## Tests:
   ${data.tests}
 
-  ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
+  ## Email
+  If you have any questions about the repo, open an issue or contact me directly at ${data.email}
 
   `;
 }
